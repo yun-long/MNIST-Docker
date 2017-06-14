@@ -16,7 +16,7 @@ print("Validation Data Size:{0}".format(len(mnist.validation.images)))
 # plot a data sample
 images = mnist.test.images[0:9]
 labels = mnist.test.labels[0:9]
-#u.plot_images(images, labels)
+u.plot_images(images, labels)
 
 # input tensors
 with tf.name_scope('input'):
