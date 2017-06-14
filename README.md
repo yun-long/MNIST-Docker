@@ -18,4 +18,4 @@ cd to the root directory of the project
 
 ### Step_04
 
-run docker-compose up
+run nvidia-docker-compose up

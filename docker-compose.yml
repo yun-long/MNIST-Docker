@@ -12,6 +12,7 @@ services:
     entrypoint: "sh /etc/pycharm/bin/pycharm.sh"
     ports:
      - "5000:5000"
+     - "6006:6006"
     volumes: 
      - .:/app
      - /tmp/.X11-unix:/tmp/.X11-unix
