@@ -1,0 +1,25 @@
+services:
+  tensorflow:
+    build: .
+    container_name: mnist_container
+    devices:
+    - /dev/nvidia0
+    - /dev/nvidiactl
+    - /dev/nvidia-uvm
+    - /dev/nvidia-uvm-tools
+    entrypoint: sh /etc/pycharm/bin/pycharm.sh
+    environment:
+    - DISPLAY=$DISPLAY
+    image: mnist_demo
+    ports:
+    - 5000:5000
+    stdin_open: true
+    tty: true
+    volumes:
+    - .:/app
+    - /tmp/.X11-unix:/tmp/.X11-unix
+    - nvidia_driver_375.66:/usr/local/nvidia:ro
+version: '2'
+volumes:
+  nvidia_driver_375.66:
+    external: true

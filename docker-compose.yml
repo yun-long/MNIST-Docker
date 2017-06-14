@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+
+  tensorflow:
+    build: .
+    image: mnist_demo 
+    environment:
+     - DISPLAY=$DISPLAY
+    stdin_open: true
+    tty: true
+    entrypoint: "sh /etc/pycharm/bin/pycharm.sh"
+    ports:
+     - "5000:5000"
+    volumes: 
+     - .:/app
+     - /tmp/.X11-unix:/tmp/.X11-unix
+    container_name: mnist_container
