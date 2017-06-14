@@ -6,15 +6,15 @@ Download nvidia-docker
 
 ### Step_02
 
-git clone this project to your computer
+run pip3 install nvidia-docker-compose
 
 ### Step_03
 
-cd to the root directory of the project
+git clone this project to your computer
 
 ### Step_04
 
-run pip install nvidia-docker-compose
+cd to the root directory of the project
 
 ### Step_04
 
